@@ -33,6 +33,9 @@ public class Person implements UserDetails {
   public Person() {
   }
 
+  /**
+   * Person constructor.
+   */
   public Person(String username, String password, Role role) {
     this.username = username;
     this.password = password;

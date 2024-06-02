@@ -7,6 +7,10 @@ import java.time.temporal.ChronoUnit;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+
+/**
+ * Token Service implementation.
+ */
 @Service
 public class TokenService {
 
@@ -16,6 +20,9 @@ public class TokenService {
     this.algorithm = Algorithm.HMAC256(secret);
   }
 
+  /**
+   * Method for token creation.
+   */
   public String createToken(String username) {
     return JWT.create()
         .withSubject(username)

@@ -26,7 +26,8 @@ public class SecurityConfig {
    * Implementing Beans.
    */
   @Bean
-  public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
+  public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity)
+      throws Exception {
     return httpSecurity
         .csrf(AbstractHttpConfigurer::disable)
         .sessionManagement(
@@ -41,8 +42,9 @@ public class SecurityConfig {
   }
 
   @Bean
-  public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
-    throws Exception {
+  public AuthenticationManager authenticationManager(
+      AuthenticationConfiguration authenticationConfiguration)
+      throws Exception {
     return authenticationConfiguration.getAuthenticationManager();
   }
 

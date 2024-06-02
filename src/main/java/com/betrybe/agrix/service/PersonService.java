@@ -1,8 +1,8 @@
 package com.betrybe.agrix.service;
 
 import com.betrybe.agrix.entity.Person;
-import com.betrybe.agrix.service.exceptions.PersonNotFoundException;
 import com.betrybe.agrix.repository.PersonRepository;
+import com.betrybe.agrix.service.exceptions.PersonNotFoundException;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
